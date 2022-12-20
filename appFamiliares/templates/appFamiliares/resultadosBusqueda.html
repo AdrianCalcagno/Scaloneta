@@ -1,0 +1,15 @@
+{% extends "appFamiliares/padre.html" %}
+
+{% load static %}
+
+{% block contenido_que_cambia %}
+
+<h3>Listado de mensajes</h3>
+
+{% for mensaje in mensajes %}
+
+<h4>{{ mensaje.mensaje }}</h4>
+
+{% endfor %}
+
+{% endblock %}

@@ -48,6 +48,7 @@
         <ul>
           <li><a class="nav-link scrollto active" href="{% url 'integrantes' %}">Integrantes</a></li>
           <li><a class="nav-link scrollto" href="{% url 'contacto' %}">Dejá tu mensaje</a></li>
+          <li><a class="nav-link scrollto" href="{% url 'busquedaMensajes' %}">Buscá tu mensaje</a></li>
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
       </nav><!-- .navbar -->
@@ -58,11 +59,13 @@
     <div class="container">
     <br><br><br><br>
     <h2>¡Bienvenido a la Scaloneta!</h2>
-   
-    <!-- src="{% static 'appFamiliares/img/team/slide1.jpg' %}" -->
-   
-    <!-- Inicia Carrusel -->
-    
+
+    <p>En esta página podrás encontrar información sobre los integrantes de la Scaloneta, además de poder dejar tu mensaje para que podamos leerlo.</p>
+
+    {{ mensaje }}
+
+       <!-- Inicia Carrusel -->
+
     <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
       <div class="carousel-inner">
         <div class="carousel-item active">
@@ -122,6 +125,7 @@
             <ul>
               <li><i class="bx bx-chevron-right"></i> <a href="{% url 'integrantes' %}">Integrantes</a></li>
               <li><i class="bx bx-chevron-right"></i> <a href="{% url 'contacto' %}">Dejá tu mensaje</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="{% url 'busquedaMensajes' %}">Buscá tu mensaje</a></li>
             </ul>
           </div>
 
@@ -161,9 +165,6 @@
       </div>
     </div>
   </footer><!-- End Footer -->
-
-  <div id="preloader"></div>
-  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
 
   <!-- Vendor JS Files -->
   <script src="{% static 'appFamiliares/vendor/purecounter/purecounter_vanilla.js' %}"></script>
