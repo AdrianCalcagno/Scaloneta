@@ -6,10 +6,18 @@
 
 <h3>Listado de mensajes</h3>
 
+{% if mensajes %}
+
 {% for mensaje in mensajes %}
 
 <h4>{{ mensaje.mensaje }}</h4>
 
 {% endfor %}
+
+{% else %}
+
+<h2 style="color:red">No hay mensajes con ese Email</h2>
+
+{% endif %}
 
 {% endblock %}

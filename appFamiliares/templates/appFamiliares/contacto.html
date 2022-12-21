@@ -45,7 +45,7 @@
 
         <div class="col-lg-8 mt-5 mt-lg-0">
 
-          <form action="{% url 'contacto' %}" method="POST" role="form" class="php-email-form"> {% csrf_token %}
+          <form action="{% url 'contacto' %}" method="POST" role="form" class=""> {% csrf_token %}
 
             <table>
 
@@ -65,13 +65,9 @@
                 <textarea class="form-control" name="mensaje" rows="5" placeholder="Tu Mensaje" required></textarea>
               </div>
               <div class="my-3 col-12">
-                <div class="loading">Cargando....</div>
-                <div class="error-message">Ha ocurrido un error</div>
-                <div class="sent-message">¡Tu mensaje fue enviado, QUE VIVA EL FUTBOL!</div>
               </div>
 
-              <div class="text-center col-12"><button type="submit">Enviar Mensaje</button></div>
-                <h2>{{ mensaje }}</h2>
+              <div class="text-center col-12"><button class="btn-primary" type="">Enviar Mensaje</button></div>
 
             </div>
 

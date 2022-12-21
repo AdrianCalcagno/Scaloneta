@@ -32,7 +32,7 @@ def contacto(request):
             mensaje = informacion["mensaje"]
             final = Mensajes(nombre=nombre, email=email, asunto=asunto, mensaje=mensaje)
             final.save()
-            return render (request, "appFamiliares/contacto.html", {"mensaje":"Mensaje enviado"})
+            return render (request, "appFamiliares/padre.html", {"mensaje":"¡Mensaje Enviado! QUE VIVA EL FUTBOL"})
         else:
             return render (request, "appFamiliares/contacto.html", {"forms":forms, "mensaje":"Algo falló, revisá la información"})
     else:
